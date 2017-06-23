@@ -1,0 +1,8 @@
+<!- This page receives a 'card' element from the view and displays the recto and the verso of this card ->
+{% extends 'base.html' %}
+{%block title%} Display {% endblock title %}
+{% block content %}
+<p>{{card.id}}</p>
+<p>{{card.recto}}</p>
+<p>{{card.verso}}</p>
+{% endblock %}

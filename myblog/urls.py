@@ -16,7 +16,8 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^sitemap\.xml$', sitemap,
         {'sitemaps': {'cmspages': CMSSitemap}}),
-    url(r'^decks/',views.decks)
+    url(r'^decks/',views.decks),
+    url(r'^card/',views.display_card)
 ]
 
 urlpatterns += i18n_patterns(
