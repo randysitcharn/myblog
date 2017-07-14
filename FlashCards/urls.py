@@ -13,10 +13,10 @@ Including another URLconf
     1. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import include, url
-from django.contrib import admin
-
+from . import views
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^',include('FlashCards.urls'))
+    url(r'^$',views.index,name='FlashCards'),
+    url(r'^addDeck/post_url/$',views.post_deck,name='post_deck'),
+    url(r'^addDeck/$',views.formPage,name='addDeck')
 ]
